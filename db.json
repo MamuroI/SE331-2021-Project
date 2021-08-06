@@ -1,95 +1,94 @@
 {
-    "patients":[
-        {
-            "firstname":"John",
-            "surname":"Snow",
-            "status":"first_dose",
-            "age":19,
-            "address":{
-                "country":"Thailand",
-                "state":"Chiangmai",
-                "city":"Mueng",
-                "district":"Suthep",
-                "more":"One Plus Condo"
+    "patients": [{
+            "firstname": "John",
+            "surname": "Snow",
+            "status": 1,
+            "age": 19,
+            "address": {
+                "country": "Thailand",
+                "state": "Chiangmai",
+                "city": "Mueng",
+                "district": "Suthep",
+                "more": "One Plus Condo"
             },
-            "vaccines":["Pfier"],
-            "comment":""
+            "vaccines": ["Pfier"],
+            "comment": ""
         },
         {
-            "firstname":"John",
-            "surname":"Jone",
-            "status":"second_dose",
-            "age":25,
-            "address":{
-                "country":"USA",
-                "state":"Newyork",
-                "city":"Yorknew",
-                "district":"Norkyew",
-                "more":""
+            "firstname": "John",
+            "surname": "Jone",
+            "status": 2,
+            "age": 25,
+            "address": {
+                "country": "USA",
+                "state": "Newyork",
+                "city": "Yorknew",
+                "district": "Norkyew",
+                "more": ""
             },
-            "vaccines":["Pfier", "Pfier"],
-            "comment":""
+            "vaccines": ["Pfier", "Pfier"],
+            "comment": ""
         },
         {
-            "firstname":"John",
-            "surname":"Snow",
-            "status":"first_dose",
-            "age":19,
-            "address":{
-                "country":"Thailand",
-                "state":"Chiangmai",
-                "city":"Mueng",
-                "district":"Suthep",
-                "more":"One Plus Condo"
+            "firstname": "Olaf",
+            "surname": "flao",
+            "status": 1,
+            "age": 29,
+            "address": {
+                "country": "Thailand",
+                "state": "Chiangmai",
+                "city": "Mueng",
+                "district": "Suthep",
+                "more": "One Plus Condo"
             },
-            "vaccines":["Pfier"],
-            "comment":""
+            "vaccines": ["Johnson&Johnson"],
+            "comment": ""
         },
         {
-            "firstname":"John",
-            "surname":"Snow",
-            "status":"first_dose",
-            "age":19,
-            "address":{
-                "country":"Thailand",
-                "state":"Chiangmai",
-                "city":"Mueng",
-                "district":"Suthep",
-                "more":"One Plus Condo"
+            "firstname": "Monkey D",
+            "surname": "Luffy",
+            "status": 0,
+            "age": 17,
+            "address": {
+                "country": "Japan",
+                "state": "Tokyo",
+                "city": "Hokkaido",
+                "district": "Onepiece",
+                "more": "Sunny"
             },
-            "vaccines":["Pfier"],
-            "comment":""
+            "vaccines": [],
+            "comment": ""
         },
         {
-            "firstname":"John",
-            "surname":"Snow",
-            "status":"first_dose",
-            "age":19,
-            "address":{
-                "country":"Thailand",
-                "state":"Chiangmai",
-                "city":"Mueng",
-                "district":"Suthep",
-                "more":"One Plus Condo"
+            "firstname": "Tony",
+            "surname": "Stark",
+            "status": 2,
+            "age": 39,
+            "address": {
+                "country": "USA",
+                "state": "Newyork",
+                "city": "Avenger",
+                "district": "first generation",
+                "more": "Ironman"
             },
-            "vaccines":["Pfier"],
-            "comment":""
+            "vaccines": ["Pfier", "Pfier"],
+            "comment": ""
         },
         {
-            "firstname":"John",
-            "surname":"Snow",
-            "status":"first_dose",
-            "age":19,
-            "address":{
-                "country":"Thailand",
-                "state":"Chiangmai",
-                "city":"Mueng",
-                "district":"Suthep",
-                "more":"One Plus Condo"
+            "firstname": "Eva",
+            "surname": "Elfie",
+            "status": 1,
+            "age": 22,
+            "address": {
+                "country": "Thailand",
+                "state": "Chiangmai",
+                "city": "Mueng",
+                "district": "Suthep",
+                "more": "One Plus Condo"
             },
-            "vaccines":["Pfier"],
-            "comment":""
+            "vaccines": ["Sinopharm"],
+            "comment": ""
         }
     ],
-    "vaccines":["Pfier", "Sinovac", "Moderna", "Astrasineca", "Sinopharm", "Johnson&Johnson", "Novavax"]
+    "vaccines": ["Pfier", "Sinovac", "Moderna", "Astrasineca", "Sinopharm", "Johnson&Johnson", "Novavax"]
 }
