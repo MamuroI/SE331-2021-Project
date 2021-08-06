@@ -9,6 +9,7 @@
 
 <script>
 import PatientCard from '@/components/PatientCard.vue'
+import api from '@/services'
 // @ is an alias to /src
 export default {
   name: "Home",
@@ -68,6 +69,13 @@ export default {
         },
       ]
     }
+  },
+  created(){
+    api.getPatients().then((result) => {
+      console.log(result.data)
+    }).catch((err) => {
+      console.log(err.message)
+    });
   }
 };
 </script>
