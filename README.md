@@ -1,6 +1,6 @@
 # Midterm project
   Contributors:
-    622115014 Thanatorn Kanthala  https://github.com/aisudev
+    `622115014 Thanatorn Kanthala  https://github.com/aisudev`
     
     622115024 Pongpanoth Panya https://github.com/MamuroI
     
