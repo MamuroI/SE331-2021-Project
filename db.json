@@ -1,5 +1,6 @@
 {
     "patients": [{
+            "id": 1,
             "firstname": "John",
             "surname": "Snow",
             "status": 1,
@@ -15,6 +16,7 @@
             "comment": ""
         },
         {
+            "id": 2,
             "firstname": "John",
             "surname": "Jone",
             "status": 2,
@@ -30,6 +32,7 @@
             "comment": ""
         },
         {
+            "id": 3,
             "firstname": "Olaf",
             "surname": "flao",
             "status": 1,
@@ -45,6 +48,7 @@
             "comment": ""
         },
         {
+            "id": 4,
             "firstname": "Monkey D",
             "surname": "Luffy",
             "status": 0,
@@ -60,6 +64,7 @@
             "comment": ""
         },
         {
+            "id": 5,
             "firstname": "Tony",
             "surname": "Stark",
             "status": 2,
@@ -75,6 +80,7 @@
             "comment": ""
         },
         {
+            "id": 6,
             "firstname": "Eva",
             "surname": "Elfie",
             "status": 1,
