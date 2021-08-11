@@ -1,6 +1,24 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
+
+<script>
+// import api from "@/services";
+
+export default {
+  // inject: ["GStore"],
+  // created() {
+  //   api
+  //     .getPatients()
+  //     .then((result) => {
+  //       this.GStore.patients = result.data;
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+  // },
+};
+</script>
 
 <style>
 #app {
