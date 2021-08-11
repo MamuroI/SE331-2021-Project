@@ -27,7 +27,7 @@
       "
     >
       <button
-        @click="goToVaccine"
+        @click="routing('Vaccine')"
         class="
                 px-5 py-2 rounded w-32 mx-2
                 transition-all
@@ -39,7 +39,7 @@
         vacinne
       </button>
       <button
-        @click="goToInfo"
+        @click="routing('Info')"
         class="
                 px-5 py-2 rounded w-32 mx-2
                 transition-all
@@ -51,7 +51,7 @@
         info
       </button>
       <button
-        @click="goToComment"
+        @click="routing('Comment')"
         class="
                 px-5 py-2 rounded w-32 mx-2
                 transition-all
@@ -84,17 +84,9 @@ export default {
     },
   },
   methods: {
-    goToInfo() {
+    routing(name) {
       this.GStore.selectedPatient = this.patient.id
-      this.$router.push({ name: "Info" });
-    },
-    goToVaccine() {
-      this.GStore.selectedPatient = this.patient.id
-      this.$router.push({ name: "Vaccine" });
-    },
-    goToComment() {
-      this.GStore.selectedPatient = this.patient.id
-      this.$router.push({ name: "Comment" });
+      this.$router.push({ name: name });
     },
   },
 };
