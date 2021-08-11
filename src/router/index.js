@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import NProgress from 'nprogress'
+import Layout from '@/views/patient/Layout.vue'
+import Info from '@/views/patient/Info.vue'
+import Vaccine from '@/views/patient/Vaccine.vue'
+import Comment from '@/views/patient/Comment.vue'
 
 const routes = [
   {
@@ -8,6 +12,28 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/patient',
+    name: 'Layout',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        name: 'Info',
+        component: Info
+      },
+      {
+        path: 'vaccine',
+        name: 'Vaccine',
+        component: Vaccine
+      },
+      {
+        path: 'comment',
+        name: 'Comment',
+        component: Comment
+      }
+    ]
+  }
 ]
 
 const router = createRouter({

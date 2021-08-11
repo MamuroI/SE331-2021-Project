@@ -1,12 +1,21 @@
 <template>
-  <div>
+  <div class="container mx-auto mt-10">
     <h1>List of Patients</h1>
-    {{ GStore.patients }}
-    <Card
-      v-for="patient in GStore.patients"
-      :key="patient.id"
-      :patient="patient"
-    />
+    <div
+      class="
+      grid 
+      grid-cols-1 
+      sm:grid-cols-1 
+      md:grid-cols-2 
+      lg:grid-cols-3 
+      gap-4"
+    >
+      <Card
+        v-for="patient in GStore.patients"
+        :key="patient.id"
+        :patient="patient"
+      />
+    </div>
   </div>
 </template>
 
