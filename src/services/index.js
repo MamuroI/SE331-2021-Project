@@ -11,5 +11,8 @@ const client = axios.create({
 export default {
     getPatients(){
         return client.get(`/patients`)
+    },
+    getPatient(id){
+        return client.get(`/patients/${id}`)
     }
 }

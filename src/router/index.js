@@ -5,6 +5,8 @@ import Layout from '@/views/patient/Layout.vue'
 import Info from '@/views/patient/Info.vue'
 import Vaccine from '@/views/patient/Vaccine.vue'
 import Comment from '@/views/patient/Comment.vue'
+import api from "@/services";
+import GStore from '@/store'
 
 const routes = [
   {
@@ -16,6 +18,19 @@ const routes = [
     path: '/patient',
     name: 'Layout',
     component: Layout,
+    beforeEnter: () => {
+      return api.getPatient(GStore.selectedPatient)
+        .then((response) => {
+          GStore.patientInfo = response.data
+          console.log(response.data)
+        })
+        .catch((err) => {
+          if(err.response && err.response.status == 404){
+            console.log(err)
+          }
+
+        })
+    },
     children: [
       {
         path: '',
