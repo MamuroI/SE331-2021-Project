@@ -1,7 +1,7 @@
 {
     "patients": [{
             "id": 1,
-            "firstname": "John",
+            "name": "John",
             "surname": "Snow",
             "status": 1,
             "age": 19,
@@ -17,7 +17,7 @@
         },
         {
             "id": 2,
-            "firstname": "John",
+            "name": "John",
             "surname": "Jone",
             "status": 2,
             "age": 25,
@@ -33,7 +33,7 @@
         },
         {
             "id": 3,
-            "firstname": "Olaf",
+            "name": "Olaf",
             "surname": "flao",
             "status": 1,
             "age": 29,
@@ -49,7 +49,7 @@
         },
         {
             "id": 4,
-            "firstname": "Monkey D",
+            "name": "Monkey D",
             "surname": "Luffy",
             "status": 0,
             "age": 17,
@@ -65,7 +65,7 @@
         },
         {
             "id": 5,
-            "firstname": "Tony",
+            "name": "Tony",
             "surname": "Stark",
             "status": 2,
             "age": 39,
@@ -81,7 +81,7 @@
         },
         {
             "id": 6,
-            "firstname": "Eva",
+            "name": "Eva",
             "surname": "Elfie",
             "status": 1,
             "age": 22,

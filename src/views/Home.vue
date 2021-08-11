@@ -2,12 +2,16 @@
   <div>
     <h1>List of Patients</h1>
     {{ GStore.patients }}
-
+    <Card
+      v-for="patient in GStore.patients"
+      :key="patient.id"
+      :patient="patient"
+    />
   </div>
 </template>
 
 <script>
-// import PatientCard from "@/components/PatientCard.vue";
+import Card from "@/components/Card.vue";
 import api from "@/services";
 // @ is an alias to /src
 
@@ -15,13 +19,12 @@ export default {
   name: "Home",
   inject: ["GStore"],
   components: {
-    // PatientCard,
+    Card,
   },
   data() {
     return {};
   },
-  methods: {
-  },
+  methods: {},
   // eslint-disable-next-line no-unused-vars
   beforeRouteEnter(routeTo, routeFrom, next) {
     api
