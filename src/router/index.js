@@ -6,7 +6,6 @@ import Info from '@/views/patient/Info.vue'
 import api from "@/services";
 import GStore from '@/store'
 import CommentList from '@/views/patient/CommentList'
-import CommentForm from '@/views/patient/CommentForm'
 
 const routes = [
   {
@@ -41,11 +40,6 @@ const routes = [
         name: 'CommentList',
         component: CommentList
       },
-      {
-        path: '',
-        name: 'CommentForm',
-        component: CommentForm
-      }
     ]
   }
 ]

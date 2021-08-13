@@ -85,7 +85,6 @@ export default {
         this.comments.push(comment)
     },
     onSubmit() {
-      alert("test")
       if (this.details === "") {
         alert("Please comment before submit!");
         return;
