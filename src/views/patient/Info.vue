@@ -40,8 +40,15 @@
       <div v-show="seen">
         <p :key="item.vaccine" v-for="(item,index) in GStore.patientInfo.vaccines">{{ index+1 }} dose: {{item.vaccine}} on {{item.date}}</p>
       </div>
+      <p>{{ GStore.patientInfo.comment }}</p>
       <CommentList v-if="comments.length" :comments="comments"></CommentList>
-      <CommentForm @comment-details="addComment"></CommentForm>
+      <!-- <CommentForm @commentdetails="addComment"></CommentForm> -->
+      
+      <form class="comment-form" @submit.prevent="onSubmit">
+        <label for="comment">Comment:</label>
+        <textarea id="details" v-model="details"></textarea>
+        <input class="button" type="submit" value="Submit"> 
+      </form>
       <div class="object-right">
         <button
         @click="goBack"
@@ -67,7 +74,7 @@
 
 <script>
 import CommentList from './CommentList.vue'
-import CommentForm from './CommentForm.vue'
+// import CommentForm from './CommentForm.vue'
 export default {
   inject: ["GStore"],
   methods: {
@@ -76,17 +83,28 @@ export default {
     },
     addComment(comment){
         this.comments.push(comment)
-    }
+    },
+    onSubmit() {
+      alert("test")
+      if (this.details === "") {
+        alert("Please comment before submit!");
+        return;
+      }
+      this.addComment(this.details)
+      this.details = "";
+      console.log(this.comments)
+    },
   },
   data() {
     return {
       seen: false,
-      comments:[]
+      comments:[],
+      details: ''
     };
   },
   components: {
       CommentList,
-      CommentForm
+      // CommentForm
   }
   
 };

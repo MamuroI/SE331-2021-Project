@@ -22,7 +22,6 @@ const routes = [
       return api.getPatient(GStore.selectedPatient)
         .then((response) => {
           GStore.patientInfo = response.data
-          console.log(response.data)
         })
         .catch((err) => {
           if(err.response && err.response.status == 404){
