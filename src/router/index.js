@@ -3,10 +3,10 @@ import Home from '../views/Home.vue'
 import NProgress from 'nprogress'
 import Layout from '@/views/patient/Layout.vue'
 import Info from '@/views/patient/Info.vue'
-import Vaccine from '@/views/patient/Vaccine.vue'
-import Comment from '@/views/patient/Comment.vue'
 import api from "@/services";
 import GStore from '@/store'
+import CommentList from '@/views/patient/CommentList'
+import CommentForm from '@/views/patient/CommentForm'
 
 const routes = [
   {
@@ -38,14 +38,14 @@ const routes = [
         component: Info
       },
       {
-        path: 'vaccine',
-        name: 'Vaccine',
-        component: Vaccine
+        path: '',
+        name: 'CommentList',
+        component: CommentList
       },
       {
-        path: 'comment',
-        name: 'Comment',
-        component: Comment
+        path: '',
+        name: 'CommentForm',
+        component: CommentForm
       }
     ]
   }

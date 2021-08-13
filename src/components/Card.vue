@@ -20,38 +20,6 @@
       >
         Info
       </button>
-      <button
-        @click="goToVaccine"
-        class="
-          px-5
-          py-2
-          rounded
-          w-32
-          mx-2
-          transition-all
-          bg-yellow-200
-          hover:bg-yellow-400
-          hover:shadow-md
-        "
-      >
-        vaccine
-      </button>
-      <button
-        @click="goToComment"
-        class="
-          px-5
-          py-2
-          rounded
-          w-32
-          mx-2
-          transition-all
-          bg-blue-200
-          hover:bg-blue-400
-          hover:shadow-md
-        "
-      >
-        comment
-      </button>
     </div>
   </div>
 </template>

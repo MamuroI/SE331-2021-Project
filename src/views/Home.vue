@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-10">
+  <div class="container mx-auto mt-10 root">
     <h1>List of Patients</h1>
     <div
       class="
@@ -52,8 +52,7 @@ export default {
 
 <style scoped>
 .root {
-  justify-content: center;
-  justify-items: center;
+  
 }
 .cardSection {
   justify-items: center;
