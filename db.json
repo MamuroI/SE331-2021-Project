@@ -4,6 +4,7 @@
             "name": "John",
             "surname": "Snow",
             "status": 1,
+            "sex":"male",
             "age": 19,
             "address": {
                 "country": "Thailand",
@@ -12,6 +13,7 @@
                 "district": "Suthep",
                 "more": "One Plus Condo"
             },
+            "vaccines": ["Pfier"],
             "vaccines": [{
                 "vaccine": "Pfier",
                 "date": "12/12/2020"
@@ -23,6 +25,7 @@
             "name": "John",
             "surname": "Jone",
             "status": 2,
+            "sex":"male",
             "age": 25,
             "address": {
                 "country": "USA",
@@ -31,6 +34,7 @@
                 "district": "Norkyew",
                 "more": ""
             },
+            "vaccines": ["Pfier", "Pfier"],
             "vaccines": [{
                 "vaccine": "Pfier",
                 "date": "12/12/2020"
@@ -45,6 +49,7 @@
             "name": "Olaf",
             "surname": "flao",
             "status": 1,
+            "sex":"male",
             "age": 29,
             "address": {
                 "country": "Thailand",
@@ -53,6 +58,7 @@
                 "district": "Suthep",
                 "more": "One Plus Condo"
             },
+            "vaccines": ["Johnson&Johnson"],
             "vaccines": [{
                 "vaccine": "Johnson&Johnson",
                 "date": "15/1/2021"
@@ -64,6 +70,7 @@
             "name": "Monkey D",
             "surname": "Luffy",
             "status": 0,
+            "sex":"male",
             "age": 17,
             "address": {
                 "country": "Japan",
@@ -80,6 +87,7 @@
             "name": "Tony",
             "surname": "Stark",
             "status": 2,
+            "sex":"male",
             "age": 39,
             "address": {
                 "country": "USA",
@@ -88,6 +96,7 @@
                 "district": "first generation",
                 "more": "Ironman"
             },
+            "vaccines": ["Pfier", "Pfier"],
             "vaccines": [{
                 "vaccine": "Pfier",
                 "date": "1/4/2021"
@@ -102,6 +111,7 @@
             "name": "Eva",
             "surname": "Elfie",
             "status": 1,
+            "sex":"female",
             "age": 22,
             "address": {
                 "country": "Thailand",
@@ -110,6 +120,7 @@
                 "district": "Suthep",
                 "more": "One Plus Condo"
             },
+            "vaccines": ["Sinopharm"],
             "vaccines": [{
                 "vaccine": "Sinopharm",
                 "date": "1/1/2021"
@@ -121,6 +132,7 @@
             "name": "August",
             "surname": "Ames",
             "status": 0,
+            "sex":"female",
             "age": 27,
             "address": {
                 "country": "Thailand",
@@ -134,9 +146,10 @@
         },
         {
             "id": 8,
-            "name": "Emilly",
+            "name": "Emily",
             "surname": "Willis",
             "status": 1,
+            "sex":"female",
             "age": 18,
             "address": {
                 "country": "Thailand",
@@ -155,6 +168,7 @@
             "name": "Mia",
             "surname": "Khalifa",
             "status": 2,
+            "sex":"female",
             "age": 24,
             "address": {
                 "country": "Thailand",
