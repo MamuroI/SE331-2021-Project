@@ -7,7 +7,7 @@ body {
   width: 100%;
   margin: 0;
   overflow-x: hidden;
-  background-color: wheat;
+  background-color: white;
 }
 
 #app {
