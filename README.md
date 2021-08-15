@@ -1,4 +1,5 @@
 # Midterm project
+  Group name: ไม่มีตัง
   Contributors:
     <br/>
     `622115014 Thanatorn Kanthala  https://github.com/aisudev`
