@@ -9,6 +9,9 @@ const client = axios.create({
 })
 
 export default {
+    getAllPatients(){
+        return client.get('/patients')
+    },
     getPatients(page = 1) {
         return client.get(`/patients?_page=${page}&_limit=6`)
     },

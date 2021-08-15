@@ -146,33 +146,35 @@ export default {
       patients: [],
       filterStatus: -1,
       totalPatient: null,
+      AllPatientsModel: []
     };
   },
   computed: {
     canNext() {
-      const totalPages = Math.ceil(this.totalPatient / 6);
+      let totalPages = Math.ceil(this.totalPatient / 6);
       return this.page < totalPages;
     },
     canPrev() {
       return this.page > 1;
     },
     getDose: function () {
-      return this.GStore.patients.filter((patient) => {
+      let filterModel = this.AllPatientsModel.filter((patient) => {
         return patient.status === this.filterStatus;
       });
+      this.setTotalPatients(filterModel.length)
+      return filterModel
     },
   },
-  // created(){
-  //     api
-  //     .getPatients()
-  //     .then((response) => {
-  //         this.patients = response.data;
-  //         this.totalPatient = response.headers["x-total-count"];
-  //       })
-  //     .catch(() => {
-  //       this.$router.push({ name: "Home" });
-  //     });
-  // },
+  created(){
+      api
+      .getAllPatients()
+      .then((response) => {
+          this.AllPatientsModel = response.data;
+        })
+      .catch(() => {
+        this.$router.push({ name: "Home" });
+      });
+  },
   // eslint-disable-next-line no-unused-vars
   beforeRouteEnter(routeTo, routeFrom, next) {
     api
@@ -203,7 +205,13 @@ export default {
   },
   methods: {
     setFilterStatus(status){
+      if(status){
+        this.totalPatient = this.AllPatientsModel.length
+      }
       this.filterStatus = status
+    },
+    setTotalPatients(number){
+      this.totalPatient = number;
     }
   }
 };
