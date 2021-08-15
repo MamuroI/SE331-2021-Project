@@ -229,6 +229,24 @@ h3 {
   width: 100%;
   height: 400px;
 }
+@media only screen and (max-width: 768px) {
+  #jumbotron{
+    margin-top: 30px;
+    height: 300px;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #jumbotron{
+    margin-top: 30px;
+    height: 200px;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+  }
+}
 #header {
   font-size: 30px;
   font-weight: 600;

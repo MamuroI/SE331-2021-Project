@@ -134,7 +134,7 @@
             <td class="col-span-1">{{ index + 1 }}</td>
             <td class="col-span-2">{{ item.vaccine }}</td>
             <td class="col-span-1">{{ item.date }}</td>
-            <td class="col-span-1"></td>
+            <td class="col-span-1">{{ item.time }}</td>
           </tr>
         </table>
       </div>
@@ -231,6 +231,11 @@ export default {
   components: {
     CommentList
   },
+  created() {
+    if(this.GStore.patientInfo.comment != ""){
+      this.addComment(this.GStore.patientInfo.comment)
+    }
+  }
 };
 </script>
 
