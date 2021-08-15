@@ -16,7 +16,8 @@
             "vaccines": ["Pfier"],
             "vaccines": [{
                 "vaccine": "Pfier",
-                "date": "12/12/2020"
+                "date": "12/12/2020",
+                "time":"00:00"
             }],
             "comment": ""
         },
@@ -37,10 +38,12 @@
             "vaccines": ["Pfier", "Pfier"],
             "vaccines": [{
                 "vaccine": "Pfier",
-                "date": "12/12/2020"
+                "date": "12/12/2020",
+                "time":"00:00"
             }, {
                 "vaccine": "Pfier",
-                "date": "12/3/2021"
+                "date": "12/3/2021",
+                "time":"00:00"
             }],
             "comment": ""
         },
@@ -61,7 +64,8 @@
             "vaccines": ["Johnson&Johnson"],
             "vaccines": [{
                 "vaccine": "Johnson&Johnson",
-                "date": "15/1/2021"
+                "date": "15/1/2021",
+                "time":"00:00"
             }],
             "comment": ""
         },
@@ -99,10 +103,12 @@
             "vaccines": ["Pfier", "Pfier"],
             "vaccines": [{
                 "vaccine": "Pfier",
-                "date": "1/4/2021"
+                "date": "1/4/2021",
+                "time":"00:00"
             }, {
                 "vaccine": "Pfier",
-                "date": "19/7/2021"
+                "date": "19/7/2021",
+                "time":"00:00"
             }],
             "comment": ""
         },
@@ -123,7 +129,8 @@
             "vaccines": ["Sinopharm"],
             "vaccines": [{
                 "vaccine": "Sinopharm",
-                "date": "1/1/2021"
+                "date": "1/1/2021",
+                "time":"00:00"
             }],
             "comment": ""
         },
@@ -160,7 +167,8 @@
             },
             "vaccines": [{
                 "vaccine": "Moderna",
-                "date": "20/1/2021"
+                "date": "20/1/2021",
+                "time":"00:00"
             }],
             "comment": ""
         }, {
@@ -179,10 +187,12 @@
             },
             "vaccines": [{
                 "vaccine": "Moderna",
-                "date": "20/1/2021"
+                "date": "20/1/2021",
+                "time":"00:00"
             }, {
                 "vaccine": "Novavax",
-                "date": "20/1/2021"
+                "date": "20/1/2021",
+                "time":"00:00"
             }],
             "comment": ""
         }
