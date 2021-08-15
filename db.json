@@ -17,7 +17,7 @@
             "vaccines": [{
                 "vaccine": "Pfier",
                 "date": "12/12/2020",
-                "time":"00:00"
+                "time":"01:00"
             }],
             "comment": ""
         },
@@ -39,11 +39,11 @@
             "vaccines": [{
                 "vaccine": "Pfier",
                 "date": "12/12/2020",
-                "time":"00:00"
+                "time":"02:00"
             }, {
                 "vaccine": "Pfier",
                 "date": "12/3/2021",
-                "time":"00:00"
+                "time":"03:00"
             }],
             "comment": ""
         },
@@ -65,7 +65,7 @@
             "vaccines": [{
                 "vaccine": "Johnson&Johnson",
                 "date": "15/1/2021",
-                "time":"00:00"
+                "time":"00:40"
             }],
             "comment": ""
         },
@@ -104,11 +104,11 @@
             "vaccines": [{
                 "vaccine": "Pfier",
                 "date": "1/4/2021",
-                "time":"00:00"
+                "time":"05:50"
             }, {
                 "vaccine": "Pfier",
                 "date": "19/7/2021",
-                "time":"00:00"
+                "time":"06:00"
             }],
             "comment": ""
         },
@@ -130,7 +130,7 @@
             "vaccines": [{
                 "vaccine": "Sinopharm",
                 "date": "1/1/2021",
-                "time":"00:00"
+                "time":"07:80"
             }],
             "comment": ""
         },
@@ -168,7 +168,7 @@
             "vaccines": [{
                 "vaccine": "Moderna",
                 "date": "20/1/2021",
-                "time":"00:00"
+                "time":"09:00"
             }],
             "comment": ""
         }, {
@@ -188,11 +188,11 @@
             "vaccines": [{
                 "vaccine": "Moderna",
                 "date": "20/1/2021",
-                "time":"00:00"
+                "time":"10:11"
             }, {
                 "vaccine": "Novavax",
                 "date": "20/1/2021",
-                "time":"00:00"
+                "time":"11:12"
             }],
             "comment": ""
         }
