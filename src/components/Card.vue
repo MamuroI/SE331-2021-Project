@@ -1,25 +1,45 @@
 <template>
-  <div class="w-full shadow-lg bg-blue-300 p-5 m-1 rounded">
-    <h2 class="font-bold text-xl">Name: {{ patient.name }}</h2>
-    <h3>Surname: {{ patient.surname }}</h3>
-    <h4>status: {{ vaccinateStatus }}</h4>
-    <div class="w-full flex flex-row justify-center items-center my-2">
-      <button
-        @click="goToInfo"
-        class="
-          px-5
+  <div class="w-full shadow-lg bg-red-100 px-5 py-5 m-1 rounded root">
+    <div class="grid grid-cols-3">
+      <div class="col-span-1 justify-center items-center">
+        <img
+          v-if="patient.sex === 'male'"
+          :src="require('../assets/male.png')"
+          width="150"
+        />
+        <img
+          v-if="patient.sex === 'female'"
+          :src="require('../assets/female.png')"
+          width="150"
+        />
+      </div>
+      <div class="grid col-span-2 pl-4 ">
+        <div class="grid">
+          <h2 class="grid justify-start patientdetails">
+            Name: {{ patient.name }} {{ patient.surname }}
+          </h2>
+          <h2 class="grid justify-start patientdetails">
+            Status: {{ vaccinateStatus }}
+          </h2>
+        </div>
+        <div class="grid items-end">
+          <button
+            id="Moredetails"
+            @click="goToInfo"
+            class="
           py-2
           rounded
-          w-32
+          w-50
           mx-2
           transition-all
-          bg-green-200
-            hover:bg-green-400
-          hover:shadow-md
-        "
-      >
-        Info
-      </button>
+          bg-red-200
+          hover:bg-red-400
+          hover:shadow-md  text-gray-600 hover:text-white"
+          >
+            More Details
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -60,3 +80,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.root {
+  height: auto;
+}
+.patientdetails {
+  font-size: 16px;
+}
+#Moredetails {
+  cursor: pointer;
+}
+</style>

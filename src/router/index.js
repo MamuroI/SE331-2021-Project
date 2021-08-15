@@ -6,6 +6,8 @@ import Info from '@/views/patient/Info.vue'
 import api from "@/services";
 import GStore from '@/store'
 import CommentList from '@/views/patient/CommentList'
+import NetWorkError from '../views/NetworkError.vue';
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
   {
@@ -22,11 +24,16 @@ const routes = [
         .then((response) => {
           GStore.patientInfo = response.data
         })
-        .catch((err) => {
-          if(err.response && err.response.status == 404){
-            console.log(err)
+        .catch((error) => {
+          if (error.response && error.response.status == 404) {
+            return {
+              // <--- Return
+              name: '404Resource',
+              params: { resource: 'Patient Info page' }
+            }
+          } else {
+            return { name: 'NetworkError' } // <--- Return
           }
-
         })
     },
     children: [
@@ -41,6 +48,22 @@ const routes = [
         component: CommentList
       },
     ]
+  },
+  {
+    path: '/404/:resource',
+    name: '404Resource',
+    component: NotFound,
+    props: true
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
+  },
+  {
+    path: '/network-error',
+    name: 'NetworkError',
+    component: NetWorkError
   }
 ]
 
