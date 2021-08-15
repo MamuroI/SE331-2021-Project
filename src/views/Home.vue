@@ -11,7 +11,7 @@
           hover:text-gray-700
           hover:bg-gray-100
         "
-         @click="setFilterStatus(-1)"
+        @click="setFilterStatus(-1)"
       >
         All patients
       </h3>
@@ -56,9 +56,14 @@
         <!-- {{ filterStatus == 0 }} -->
       </h3>
     </div>
-    <div class="md:col-span-4 mx-4 ">
+    <div class="md:col-span-4 mx-4">
       <div id="jumbotron"></div>
-      <h1 id="header" class="grid justify-center md:justify-start text-gray-400 mt-3 mb-3">List of Patients</h1>
+      <h1
+        id="header"
+        class="grid justify-center md:justify-start text-gray-400 mt-3 mb-3"
+      >
+        List of Patients
+      </h1>
       <div
         v-if="filterStatus == -1"
         class="
@@ -70,7 +75,7 @@
         "
       >
         <Card
-          v-for="patient in patients"
+          v-for="patient in GStore.patients"
           :key="patient.id"
           :patient="patient"
         />
@@ -86,30 +91,35 @@
         "
       >
         <Card
-          v-for="patient in getFirstDose"
+          v-for="patient in getDose"
           :key="patient.id"
           :patient="patient"
         />
       </div>
-    </div>
-
-    <div
-      class="w-full 
-      flex flex-row justify-around items-center
-      my-12 text-lg font-medium"
-    >
-      <router-link
-        v-if="canPrev"
-        rel="prev"
-        :to="{ name: 'Home', query: { page: page - 1 } }"
-        >prev</router-link
+      <div
+        class="
+          w-full
+          flex flex-row
+          justify-around
+          items-center
+          my-12
+          text-lg
+          font-medium
+        "
       >
-      <router-link
-        v-if="canNext"
-        rel="prev"
-        :to="{ name: 'Home', query: { page: page + 1 } }"
-        >next</router-link
-      >
+        <router-link
+          v-if="canPrev"
+          rel="prev"
+          :to="{ name: 'Home', query: { page: page - 1 } }"
+          >prev</router-link
+        >
+        <router-link
+          v-if="canNext"
+          rel="prev"
+          :to="{ name: 'Home', query: { page: page + 1 } }"
+          >next</router-link
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -146,25 +156,56 @@ export default {
     canPrev() {
       return this.page > 1;
     },
-    getFirstDose: function(){
-        return this.patients.filter((patient)=>{
-          return patient.status === this.filterStatus
-        })
-        
-    }
-  }, 
-  created(){
-      api
-      .getPatients()
-      .then((response) => {
-          this.patients = response.data;
-          this.totalPatient = response.headers["x-total-count"];
-        })
-      .catch(() => {
-        this.$router.push({ name: "Home" });
+    getDose: function () {
+      return this.GStore.patients.filter((patient) => {
+        return patient.status === this.filterStatus;
       });
-  }, 
-      
+    },
+  },
+  // created(){
+  //     api
+  //     .getPatients()
+  //     .then((response) => {
+  //         this.patients = response.data;
+  //         this.totalPatient = response.headers["x-total-count"];
+  //       })
+  //     .catch(() => {
+  //       this.$router.push({ name: "Home" });
+  //     });
+  // },
+  // eslint-disable-next-line no-unused-vars
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    api
+      .getPatients(parseInt(routeTo.query.page))
+      .then((response) => {
+        next((comp) => {
+          comp.GStore.patients = response.data;
+          console.log(comp.GStore.patients);
+          comp.totalPatient = response.headers["x-total-count"];
+        });
+      })
+      .catch(() => {
+        next({ name: "NetworkError" });
+      });
+  },
+  // eslint-disable-next-line no-unused-vars
+  beforeRouteUpdate(routeTo, routeFrom, next) {
+    api
+      .getPatients(parseInt(routeTo.query.page))
+      .then((response) => {
+        this.GStore.patients = response.data;
+        this.totalPatient = response.headers["x-total-count"];
+        next();
+      })
+      .catch(() => {
+        next({ name: "NetworkError" });
+      });
+  },
+  methods: {
+    setFilterStatus(status){
+      this.filterStatus = status
+    }
+  }
 };
 </script>
 
@@ -174,9 +215,9 @@ h3 {
   cursor: pointer;
 }
 #jumbotron {
-  background-image: url('../assets/covid19jumbotron2.jpg') ;
+  background-image: url("../assets/covid19jumbotron2.jpg");
   background-size: cover;
-  background-position: center ;
+  background-position: center;
   width: 100%;
   height: 400px;
 }
